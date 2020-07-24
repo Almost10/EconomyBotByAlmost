@@ -9,7 +9,7 @@ module.exports.run = async (client, message, args) => {
             .setThumbnail(client.user.avatarURL)
             .setDescription("These are the U.A. Unit Bot commands.")
             .addField("Members", "balance, leaderboard, pay, avater, ping")
-            .addField("Council Members", "adminpay, adminremove")
+            .addField("Unit Managers", "adminpay, adminremove")
             .setFooter("If you have any commands you want to see added contact me and I will try to add them.")
         message.channel.send(embed)
     }
