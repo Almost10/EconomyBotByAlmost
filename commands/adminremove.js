@@ -12,7 +12,13 @@ const Data = require("../models/data.js");
 const data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) => {
-    if(message.author.id != "562363791321595925") return message.reply("Low ranking members cannot perform this command!");
+    var allowed = false;
+    
+    if(message.author.id == "445706307698294786") allowed = true;
+    
+    if(message.author.id == "698942540933758976") allowed = true;
+
+    if(allowed == false) return message.reply("Low ranking members cannot perform this command!");
 
     let user = message.mentions.members.first() || bot.users.cache.get(args[0]);
     if(!user) return message.reply("I couldn't find that person");
@@ -22,7 +28,7 @@ module.exports.run = async (bot, message, args) => {
     }, (err, userData) => {
         if(err) console.log(err);
 
-        if(!args[1]) return message.reply("You have to say how much you wanna pay.");
+        if(!args[1]) return message.reply("You have to say how much you wanna remove.");
 
         if(args[1] != Math.floor(args[1])) return message.reply("You have to put in a number!");
 
@@ -40,12 +46,12 @@ module.exports.run = async (bot, message, args) => {
             userData.save().catch(err => console.log(err));;
         }
 
-        return message.channel.send(`${message.author.username} admin removed ${args[1]} ₪ from ${bot.users.cache.get(user.id).username}`);
+        return message.channel.send(`${message.author.username} admin payed ${args[1]} ₪ to ${bot.users.cache.get(user.id).username}`);
     })
     
 }
   
   module.exports.help ={
-    name: "adminremove", 
+    name: "adminpay", 
     aliases: []
 }
