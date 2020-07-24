@@ -45,10 +45,10 @@ module.exports.run = async (bot, message, args) => {
         } else {
 
             embed.setFooter(`Page ${pg}/${pg}`)
-            embed.setColor('GOLD: 15844367')
+            embed.setColor('RANDOM')
             for(i = start; i < end; i++) {
                 embed.addField('\u200b', `${i + 1}. ${res[i].name} - ` + '**`' + res[i].money.toLocaleString() + '`**');
-                embed.setThumbnail('https://images-ext-2.discordapp.net/external/neFQL4B-2SSTyMmMYhlrbx0jckQQGTk5ay1rt4fo_b4/%3Fcb%3D20200630201016/https/vignette.wikia.nocookie.net/0b0t/images/1/14/HSF_army.png/revision/latest?width=400&height=284')
+                embed.setThumbnail('https://www.bl.uk/britishlibrary/~/media/bl/global/maps/collection%20items/5%20united%20nations%20emblem.jpg')
             }
 
         }
