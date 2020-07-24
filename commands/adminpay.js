@@ -12,7 +12,7 @@ const Data = require("../models/data.js");
 const data = require("../models/data.js");
 
 module.exports.run = async (bot, message, args) => {
-    if(!message.member.roles.find(r => r.name === "Leaders/Representatives")) return message.reply("Low ranking members cannot perform this command!");
+    if(!message.member.roles.has(734724740341825547)) return message.reply("Low ranking members cannot perform this command!");
 
     let user = message.mentions.members.first() || bot.users.cache.get(args[0]);
     if(!user) return message.reply("I couldn't find that person");
