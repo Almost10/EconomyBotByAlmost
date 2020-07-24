@@ -46,11 +46,7 @@ module.exports.run = async (bot, message, args) => {
             userData.save().catch(err => console.log(err));;
         }
 
-        let embed = new Discord.MessageEmbed()
-            .setColor('RANDOM')
-            .setDescription("These are the U.A. Unit Bot commands.")
-            .addField("Your balance", 'return message.channel.send(`${message.author.username} admin payed ${args[1]} ₪ to ${bot.users.cache.get(user.id).username}`)')
-        message.channel.send(embed)
+        return message.channel.send(`${message.author.username} admin payed ${args[1]} ₪ to ${bot.users.cache.get(user.id).username}`);
     })
     
 }
