@@ -46,7 +46,7 @@ module.exports.run = async (bot, message, args) => {
             userData.save().catch(err => console.log(err));;
         }
 
-        return message.channel.send(`${message.author.username} admin payed ${args[1]} ₪ to ${bot.users.cache.get(user.id).username}`);
+        return message.channel.send(`${message.author.username} admin removed ${args[1]} ₪ from ${bot.users.cache.get(user.id).username}`);
     })
     
 }
