@@ -18,6 +18,8 @@ module.exports.run = async (bot, message, args) => {
     
     if(message.author.id == "698942540933758976") allowed = true;
 
+    if(message.author.id == "686725030423429183") allowed = true;
+
     if(allowed == false) return message.reply("Low ranking members cannot perform this command!");
 
     let user = message.mentions.members.first() || bot.users.cache.get(args[0]);
