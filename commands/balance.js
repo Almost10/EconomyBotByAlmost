@@ -1,4 +1,3 @@
-  
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
 
@@ -45,13 +44,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle("U.A. Unit Bot")
         .setColor('RANDOM')
         .setThumbnail(client.user.avatarURL)
-<<<<<<< HEAD
-        .setDescription("This is your money.")
-        .addField("Your balance is: ", cashmoney + " ₪")
-=======
-        .setDescription("MONIES!@one!1")
-        .addField("You have this many monies: ", cashmoney + " ₪")
->>>>>>> 1ec15611dd8067005869948a8896ef202b8dc1ef
+        .addField("This is your balance: ", cashmoney + " ₪")
         .setFooter("Deal with it!")
         
 	return(message.channel.send(embed));
