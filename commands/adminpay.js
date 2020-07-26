@@ -30,8 +30,6 @@ module.exports.run = async (bot, message, args) => {
 
         if(!args[1]) return message.reply("You have to say how much you wanna pay.");
 
-        if(args[1] != Math.floor(args[1])) return message.reply("You have to put in a number!");
-
         if(!userData) {                   
             const newData = new Data({
                 name: bot.users.cache.get(user.id).username,
