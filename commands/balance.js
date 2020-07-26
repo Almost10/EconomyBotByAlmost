@@ -33,14 +33,13 @@ module.exports.run = async (bot, message, args) => {
 
             })
             newData.save().catch(err => console.log(err));
-			var cashmoney = "ZERO";
+			cashmoney = "ZERO";
             //return message.channel.send(`${bot.users.cache.get(user.id).username} has 0₪`);
         } else {
-			var cashmoney = data.money.ToString();
+			cashmoney = data.money.ToString();
             //return message.channel.send(`${bot.users.cache.get(user.id).username} has ${data.money} ₪`);
         }
     
-	var cashmoney = 
 	let embed = new Discord.MessageEmbed()
         .setTitle("U.A. Unit Bot")
         .setColor('RANDOM')
