@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 const mongoose = require("mongoose");
 const botconfig = require("../botconfig.json");
 
@@ -36,15 +37,16 @@ module.exports.run = async (bot, message, args) => {
 			cashmoney = "ZERO";
             //return message.channel.send(`${bot.users.cache.get(user.id).username} has 0₪`);
         } else {
-			cashmoney = data.money.ToString();
+			cashmoney = data.money.toString();
             //return message.channel.send(`${bot.users.cache.get(user.id).username} has ${data.money} ₪`);
         }
     
 	let embed = new Discord.MessageEmbed()
         .setTitle("U.A. Unit Bot")
         .setColor('RANDOM')
-        .setThumbnail(client.user.avatarURL)
-        .addField("This is your balance: ", cashmoney + " ₪")
+        .setThumbnail(bot.user.avatarURL) 
+        .setDescription("MONIES!@one!1")
+        .addField("You have this many monies: ", cashmoney + " ₪")
         .setFooter("Deal with it!")
         
 	return(message.channel.send(embed));
