@@ -1,1 +1,2 @@
-THis bot is private currency bot if u somehow get access to it dont u try to steal becz we dont have database here so jokes on u
+This is a discord economy bot used for multiple purposes. You have to link your own database to it to make it work for yourself.
+
